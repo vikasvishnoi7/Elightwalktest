@@ -1,10 +1,28 @@
 {
   "products": [
     {
-      "id": "7",
-      "title": "gy",
-      "description": "fgf",
-      "price": "4564"
+      "id": "1",
+      "title": "Smartphone1",
+      "description": "This is good Smartphone1",
+      "price": "10000"
+    },
+    {
+      "id": "2",
+      "title": "Smartphone2",
+      "description": "This is good Smartphone2",
+      "price": "20000"
+    },
+    {
+      "id": "3",
+      "title": "Smartphone3",
+      "description": "This is good Smartphone3",
+      "price": "30000"
+    },
+    {
+      "id": "4",
+      "title": "Smartphone4",
+      "description": "This is good Smartphone4",
+      "price": "40000"
     }
   ]
 }
