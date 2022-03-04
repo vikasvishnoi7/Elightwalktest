@@ -7,10 +7,6 @@ function Home() {
 
   const [items, setItems] = useState([]);
 
-  if (items.length == 0) {
-    navigate("/items/add");
-  }
-
   console.log(items)
   useEffect(() => {
     loadproducts();
@@ -25,46 +21,52 @@ function Home() {
     loadproducts();
   };
   return (
-    <div className="container">
-      <div className="py-4">
-        <h1>Home Page</h1>
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">title</th>
-              <th scope="col">description Name</th>
-              <th scope="col">price</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              items.map((item, i) => (
-                <tr key={i}>
-                  <th scope="row">{item.id}</th>
-                  <td>{item.title}</td>
-                  <td>{item.description}</td>
-                  <td>{item.price}</td>
-                  <td>
-
-                    <button type="button" className="btn btn-outline-primary">
-                      <Link to={`/items/${item.id}`}>View</Link>
-                    </button>
-                    <button type="button" className="btn btn-outline-primary">
-                      <Link to={`/items/edit/${item.id}`}>Edit</Link>
-                    </button>
-                    <button type="button" className="btn btn-danger" onClick={() => deleteItem(item.id)}>
-                      <Link to="/">Delete</Link>
-                    </button>
-
-                  </td>
+    <>
+      {items.length == 0 ? <h1>OutOfSctockProduct</h1> :
+        <div className="container">
+          <div className="py-4">
+            <h1>Home Page</h1>
+            <table className="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">title</th>
+                  <th scope="col">description Name</th>
+                  <th scope="col">price</th>
+                  <th scope="col">Actions</th>
                 </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
-    </div>
+              </thead>
+              <tbody>
+                {
+                  items.map((item, i) => (
+                    <tr key={i}>
+                      <th scope="row">{item.id}</th>
+                      <td>{item.title}</td>
+                      <td>{item.description}</td>
+                      <td>{item.price}</td>
+                      <td>
+
+                        <button type="button" className="btn btn-outline-primary">
+                          <Link to={`/items/${item.id}`}>View</Link>
+                        </button>
+                        <button type="button" className="btn btn-outline-primary">
+                          <Link to={`/items/edit/${item.id}`}>Edit</Link>
+                        </button>
+                        <button type="button" className="btn btn-danger" onClick={() => deleteItem(item.id)}>
+                          <Link to="/">Delete</Link>
+                        </button>
+
+                      </td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      }
+    </>
   )
 }
 

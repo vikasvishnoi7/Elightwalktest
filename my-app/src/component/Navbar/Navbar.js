@@ -5,7 +5,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="container">
                 <Link className="navbar-brand" to="/">
-                    Recat Items
+                    React Items
                 </Link>
                 <button
                     className="navbar-toggler"

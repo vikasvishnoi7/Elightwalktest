@@ -23,6 +23,18 @@
       "title": "Smartphone4",
       "description": "This is good Smartphone4",
       "price": "40000"
+    },
+    {
+      "id": "5",
+      "title": "Smartphone5",
+      "description": "This is good Smartphone5",
+      "price": "50000"
+    },
+    {
+      "id": "6",
+      "title": "Smartphone6",
+      "description": "This is good Smartphone6",
+      "price": "60000"
     }
   ]
 }
