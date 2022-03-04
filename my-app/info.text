@@ -1,6 +1,7 @@
+//npm run start:dev
+
 npm i axios
 npm i react-router-dom
 npm i bootstrap
 
 
-//npm run start:dev
